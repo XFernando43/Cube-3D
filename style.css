@@ -11,7 +11,7 @@ body{
     height: 60vh;
     width: 30vw;
     position: absolute;
-    top: 50vh;
+    top: 2vh;
     left: 50vw;
     transform: translate(-50%,50%);
     perspective: 1000px;
