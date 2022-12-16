@@ -23,7 +23,7 @@ body{
     top: 100px;
     left: 100px;
     transform-style: preserve-3d;
-    transform: rotateY(30deg);
+    /*transform: rotateY(30deg);*/
     animation: animate 5s infinite;
 }
 @keyframes animate{
@@ -31,15 +31,15 @@ body{
         transform: rotateX(45deg) rotateY(-45deg);
     }
     25%{
-        transform: rotateX(45deg) rotateY(-45deg);
+        transform: rotateX(-45deg) rotateY(-45deg);
     }
     50%{
-        transform: rotateX(45deg) rotateY(-45deg);
+        transform: rotateX(45deg) rotateY(45deg);
     }
-    0%{
-        transform: rotateX(45deg) rotateY(-45deg);
+    75%{
+        transform: rotateX(-45deg) rotateY(45deg);
     }
-    0%{
+    100%{
         transform: rotateX(45deg) rotateY(-45deg);
     }
 }
@@ -54,6 +54,7 @@ body{
     font-size: 32px;
     box-sizing: border-box;
     position: absolute;
+    transition: all 1s; 
 }
 #front{
     transform: translateZ(125px);
@@ -80,10 +81,28 @@ body{
 input{
     height: 50px;
     width: 100px;
-    background: greenyellow;
+    background: pink;
     font-size: 22px;
     cursor: pointer;
     position: absolute;
-    top: -100;
+    top: -100px;
     left: 175px;
+}
+input:focus~ .box #front{
+    transform: translateZ(180px) rotateY(360deg);
+}
+input:focus~ .box #back{
+    transform: translateZ(-180px) rotateY(360deg);
+}
+input:focus~ .box #left{
+    right: 180px;
+}
+input:focus~ .box #right{
+    left: 180px;
+}
+input:focus~ .box #top{
+    bottom: 180px;
+}
+input:focus~ .box #bottom{
+    top: 180px;
 }
