@@ -5,7 +5,7 @@
 }
 body{
     height: 100vh;
-    background: radial-gradient(rgb(5,221,245), rgb(6, 150, 253));
+    background: radial-gradient(rgb(47, 99, 59), rgb(0,0,0));
 }
 .container{
     height: 60vh;
@@ -49,12 +49,12 @@ body{
     text-align: center;
     padding: 100px 0px;
     color: white;
-    background: black;
+    background: linear-gradient(#151515,#00ec00);
     border: 2px solid white;
     font-size: 32px;
     box-sizing: border-box;
     position: absolute;
-    transition: all 1s; 
+    transition: all 1s;
 }
 #front{
     transform: translateZ(125px);
@@ -81,7 +81,8 @@ body{
 input{
     height: 50px;
     width: 100px;
-    background: pink;
+    background:darkorchid;
+    padding: 0mm;
     font-size: 22px;
     cursor: pointer;
     position: absolute;
